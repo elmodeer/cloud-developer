@@ -8,7 +8,9 @@ import bodyParser from 'body-parser';
 import { V0MODELS } from './controllers/v0/model.index';
 
 (async () => {
+  // registers all the models we created
   await sequelize.addModels(V0MODELS);
+  // make sure that the database is in sync with our models in sequelize. 
   await sequelize.sync();
 
   const app = express();

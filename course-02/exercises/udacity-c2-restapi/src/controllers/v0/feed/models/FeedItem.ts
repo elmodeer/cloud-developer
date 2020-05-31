@@ -3,6 +3,7 @@ import { User } from '../../users/models/User';
 
 @Table
 export class FeedItem extends Model<FeedItem> {
+  // ! means it can be null 
   @Column
   public caption!: string;
 
